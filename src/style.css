@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+:root {
+    --fonte01: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte02: "Passion One", sans-serif;
+    --fonte03: "Sriracha", cursive;
+}
+
+
+
+/* Estilo geral */
+body {
+    background-image: url('../imagens/madeira.png');
+    background-size: cover;
+    /* Para garantir que a imagem cubra toda a tela */
+    background-repeat: no-repeat;
+    /* Para evitar a repetição da imagem */
+    background-position: center center;
+    /* Para centralizar a imagem */
+
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: var(--fonte01);
+}
+
+h2 {
+    font-family: var(--fonte03);
+}
+
+h3 {
+    font-family: var(--fonte02);
+}
+
+/* Centralizar os textos e elementos */
+h1,
+h2,
+h3,
+p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para o <main> */
+main {
+    width: 100%;
+    max-width: 600px;
+    /* Largura máxima */
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.534);
+}
+
+/* Lista de sugestões */
+ul {
+    list-style: none;
+    /* Remove os marcadores da lista */
+    padding: 0;
+    margin-top: 1rem;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin-bottom: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+ul li button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+ul li button:hover {
+    background-color: #0056b3;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+
+    ul li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    ul li a {
+        margin-bottom: 0.5rem;
+    }
+}

@@ -19,8 +19,8 @@
 /* Estilo geral */
 body {
     background-image: url('../imagens/madeira.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
     background-position: center center;
 
     font-family: Arial, sans-serif;
@@ -39,8 +39,9 @@ h1 {
     font-family: var(--fonte01);
 }
 
-h2 {
+.titulo {
     font-family: var(--fonte03);
+    font-size: 2.2em;
 }
 
 h3 {
@@ -86,12 +87,19 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
+    color: #fff;
+    
 }
 
+ul li a:hover {
+    font-weight: bold;
+    
+}
+
+
+
 ul li button {
-    background-color: #40140A;
+    background-color: #8f4e28;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -101,7 +109,9 @@ ul li button {
 }
 
 ul li button:hover {
-    background-color: #0056b3;
+    
+    background-color: #40140A;
+    font-weight: bolder;
 }
 
 ul li span {
@@ -122,11 +132,17 @@ footer {
 
 footer a {
     text-decoration: none;
-    color: #007BFF;
+    color: #fff;
+}
+
+footer p {
+    color: #fff;
 }
 
 footer a:hover {
     text-decoration: underline;
+    font-weight: bolder;
+    color: #40140A;
 }
 
 /* Responsividade */

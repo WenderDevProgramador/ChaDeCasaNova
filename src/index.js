@@ -13,7 +13,7 @@ buttons.forEach(button => {
         const pixValue = listItem.querySelector('span').textContent.trim(); // Valor do PIX
 
         // Mensagem para o WhatsApp
-        const message = `Olá Wender, gostaria de escolher o seguinte item da sua lista de presentes: ${itemName} (${pixValue}).`;
+        const message = `Olá Wender, gostaria de escolher o seguinte item da sua lista de presentes: ${itemName} .`;
 
         // Redirecionar para o WhatsApp
         window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');

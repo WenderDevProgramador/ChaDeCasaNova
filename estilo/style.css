@@ -96,8 +96,6 @@ ul li a:hover {
     
 }
 
-
-
 ul li button {
     background-color: #8f4e28;
     color: white;
@@ -106,10 +104,10 @@ ul li button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.9rem;
+    margin: 7px;
 }
 
 ul li button:hover {
-    
     background-color: #40140A;
     font-weight: bolder;
 }
@@ -120,6 +118,7 @@ ul li span {
     flex-grow: 1; /* Faz o span ocupar o espaço disponível */
     display: flex;
     justify-content: flex-end; /* Alinha o texto à direita dentro do span */
+    flex-wrap: wrap; /* Permite que os elementos dentro do span se movam para a linha seguinte */
 }
 
 /* Rodapé */
@@ -158,5 +157,15 @@ footer a:hover {
 
     ul li a {
         margin-bottom: 0.5rem;
+    }
+
+    ul li span {
+        flex-grow: 0; /* Desativa o crescimento do span */
+        width: 100%; /* O span ocupará 100% da largura do pai */
+        justify-content: center; /* Alinha o texto ao centro dentro do span */
+    }
+
+    ul li button {
+        margin-top: 0.5rem;
     }
 }

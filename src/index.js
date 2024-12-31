@@ -1,5 +1,5 @@
 // Selecionar todos os botões "Escolher"
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.bnt');
 
 // Número de WhatsApp para receber as mensagens
 const whatsappNumber = "5561993578692";

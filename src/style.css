@@ -7,9 +7,7 @@
     box-sizing: border-box;
 }
 
-
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
 :root {
@@ -18,17 +16,12 @@
     --fonte03: "Sriracha", cursive;
 }
 
-
-
 /* Estilo geral */
 body {
     background-image: url('../imagens/madeira.png');
     background-size: cover;
-    /* Para garantir que a imagem cubra toda a tela */
     background-repeat: no-repeat;
-    /* Para evitar a repetição da imagem */
     background-position: center center;
-    /* Para centralizar a imagem */
 
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -67,17 +60,16 @@ p {
 main {
     width: 100%;
     max-width: 600px;
-    /* Largura máxima */
     background-color: #fff;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.534);
+    background-color: #d9a384b2;
 }
 
 /* Lista de sugestões */
 ul {
     list-style: none;
-    /* Remove os marcadores da lista */
     padding: 0;
     margin-top: 1rem;
 }
@@ -110,6 +102,14 @@ ul li button {
 
 ul li button:hover {
     background-color: #0056b3;
+}
+
+ul li span {
+    margin-right: 10px;
+    text-align: right;
+    flex-grow: 1; /* Faz o span ocupar o espaço disponível */
+    display: flex;
+    justify-content: flex-end; /* Alinha o texto à direita dentro do span */
 }
 
 /* Rodapé */

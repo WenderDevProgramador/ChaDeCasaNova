@@ -121,6 +121,17 @@ ul li span {
     flex-wrap: wrap; /* Permite que os elementos dentro do span se movam para a linha seguinte */
 }
 
+.Mercado {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+#mercado {
+    width: 160px;
+    
+}
+
 /* Rodapé */
 footer {
     margin-top: 1.5rem;

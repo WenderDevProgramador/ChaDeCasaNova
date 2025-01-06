@@ -96,6 +96,44 @@ ul li a:hover {
     
 }
 
+#divBranco {
+    background-color: #fff;
+    border-radius: 8px;
+    padding-bottom: 2px;
+    
+}
+
+#branco {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#cpf {
+    width: 150px;
+    font-size: larger;
+    padding: 5px;
+    border: none;
+}
+
+#Copia {
+    background-color:#b06032;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bolder;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#Copia:hover {
+    background-color:#61351b;
+}
+
+
+
 ul li button {
     background-color: #8f4e28;
     color: white;
@@ -129,6 +167,7 @@ ul li span {
 
 #mercado {
     width: 160px;
+    text-align: center;
     
 }
 

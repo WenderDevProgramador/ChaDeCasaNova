@@ -1,3 +1,21 @@
+// Selecionar elementos
+const btnCopia = document.querySelector("#Copia");
+const inputCpf = document.querySelector("#cpf");
+
+// Criar a função para copiar
+btnCopia.addEventListener("click", function () {
+    // Copiar o valor do input para a área de transferência
+    navigator.clipboard.writeText(inputCpf.value).then(() => {
+        // Exibir um alerta
+        alert("Chave Pix copiada para a área de transferência!");
+    }).catch(err => {
+        console.error("Erro ao copiar a chave Pix:", err);
+    });
+});
+
+
+
+
 // Selecionar todos os botões "Escolher"
 const buttons = document.querySelectorAll('.bnt');
 

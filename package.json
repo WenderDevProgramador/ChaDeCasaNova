@@ -1,0 +1,24 @@
+{
+  "name": "chadecasanova",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WenderDevProgramador/ChaDeCasaNova.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/WenderDevProgramador/ChaDeCasaNova/issues"
+  },
+  "homepage": "https://github.com/WenderDevProgramador/ChaDeCasaNova#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

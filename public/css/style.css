@@ -134,7 +134,7 @@ ul li a:hover {
 
 
 
-ul li button {
+ul li button, ul li a {
     background-color: #8f4e28;
     color: white;
     border: none;
@@ -145,10 +145,12 @@ ul li button {
     margin: 7px;
 }
 
-ul li button:hover {
+ul li button:hover, ul li a:hover {
     background-color: #40140A;
     font-weight: bolder;
 }
+
+
 
 ul li span {
     margin-right: 10px;

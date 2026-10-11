@@ -155,6 +155,43 @@ async function iniciarServidor() {
 
 
 
+    app.delete("/api/presentes/:id", async (req, res) => {
+        try {
+            const id = Number(req.params.id);
+
+            if (!Number.isInteger(id) || id <= 0) {
+                return res.status(400).json({
+                    erro: "ID inválido."
+                });
+            }
+
+            const resultado = await banco.run(
+                "DELETE FROM presentes WHERE id = ?",
+                [id]
+            );
+
+            if (resultado.changes === 0) {
+                return res.status(404).json({
+                    erro: "Presente não encontrado."
+                });
+            }
+
+            res.json({
+                mensagem: "Presente excluído com sucesso!",
+                id
+            });
+        } catch (erro) {
+            console.error("Erro ao excluir presente:", erro);
+
+            res.status(500).json({
+                erro: "Erro interno ao excluir presente."
+            });
+        }
+    });
+
+
+
+
     app.listen(PORT, () => {
         console.log(
             `Servidor rodando em http://localhost:${PORT}`

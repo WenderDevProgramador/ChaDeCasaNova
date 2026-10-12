@@ -155,6 +155,54 @@ async function iniciarServidor() {
 
 
 
+    app.patch("/api/presentes/:id/escolhido", async (req, res) => {
+        try {
+            const id = Number(req.params.id);
+            const { escolhido } = req.body;
+
+            if (!Number.isInteger(id) || id <= 0) {
+                return res.status(400).json({
+                    erro: "ID inválido."
+                });
+            }
+
+            if (escolhido !== 0 && escolhido !== 1) {
+                return res.status(400).json({
+                    erro: "A situação deve ser 0 ou 1."
+                });
+            }
+
+            const resultado = await banco.run(
+                "UPDATE presentes SET escolhido = ? WHERE id = ?",
+                [escolhido, id]
+            );
+
+            if (resultado.changes === 0) {
+                return res.status(404).json({
+                    erro: "Presente não encontrado."
+                });
+            }
+
+            res.json({
+                mensagem: escolhido === 1
+                    ? "Presente marcado como escolhido!"
+                    : "Presente disponibilizado novamente!",
+                id,
+                escolhido
+            });
+
+        } catch (erro) {
+            console.error("Erro ao alterar situação:", erro);
+
+            res.status(500).json({
+                erro: "Erro interno ao alterar situação."
+            });
+        }
+    });
+
+
+
+
     app.delete("/api/presentes/:id", async (req, res) => {
         try {
             const id = Number(req.params.id);

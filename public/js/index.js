@@ -33,29 +33,39 @@ async function carregarPresentes() {
             return;
         }
 
+
         presentes.forEach(presente => {
             const item = document.createElement("li");
 
+            // Nome do presente
             const nome = document.createElement("strong");
             nome.textContent = presente.nome;
+            item.appendChild(nome);
 
+            // Valor do presente
             const valor = document.createElement("span");
             valor.textContent =
-                ` ou pix: R$ ${Number(presente.valor).toFixed(2).replace(".", ",")}`;
-
-            item.appendChild(nome);
+                ` — Pix: R$ ${Number(presente.valor).toFixed(2).replace(".", ",")}`;
             item.appendChild(valor);
 
+            // Situação do presente
+            const situacao = document.createElement("span");
+            situacao.textContent = presente.escolhido === 1
+                ? " — Já escolhido"
+                : " — Disponível";
+            item.appendChild(situacao);
+
+            // Link para comprar
             if (presente.link) {
                 const botaoComprar = document.createElement("a");
                 botaoComprar.textContent = "Comprar";
                 botaoComprar.href = presente.link;
                 botaoComprar.target = "_blank";
                 botaoComprar.rel = "noopener noreferrer";
-
                 item.appendChild(botaoComprar);
             }
 
+            // Botão para escolher
             const botaoEscolher = document.createElement("button");
             botaoEscolher.type = "button";
 
@@ -71,6 +81,7 @@ async function carregarPresentes() {
             item.appendChild(botaoEscolher);
             listaPresentes.appendChild(item);
         });
+
 
     } catch (erro) {
         console.error("Erro ao carregar presentes:", erro);
@@ -102,3 +113,17 @@ listaPresentes.addEventListener("click", function (evento) {
 
 // Iniciar o carregamento
 carregarPresentes();
+
+
+// Atualiza a lista quando a pessoa volta para a página
+window.addEventListener("focus", function () {
+    carregarPresentes();
+});
+
+// Atualiza a lista quando a aba volta a ficar visível
+document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) {
+        carregarPresentes();
+    }
+});
+

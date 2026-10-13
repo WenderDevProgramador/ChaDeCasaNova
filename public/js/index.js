@@ -53,7 +53,7 @@ async function carregarPresentes() {
             situacao.textContent = presente.escolhido === 1
                 ? " — Já escolhido"
                 : " — Disponível";
-            item.appendChild(situacao);
+            
 
             // Link para comprar
             if (presente.link) {
@@ -70,7 +70,7 @@ async function carregarPresentes() {
             botaoEscolher.type = "button";
 
             if (presente.escolhido === 1) {
-                botaoEscolher.textContent = "Presente já escolhido!";
+                botaoEscolher.textContent = "Já escolhido!";
                 botaoEscolher.disabled = true;
             } else {
                 botaoEscolher.textContent = "Escolher";

@@ -132,6 +132,7 @@ async function carregarPresentes() {
                 const linkProduto = document.createElement("a");
                 linkProduto.textContent = " — Ver produto";
                 linkProduto.href = presente.link;
+                linkProduto.id = "verProduto";
                 linkProduto.target = "_blank";
                 linkProduto.rel = "noopener noreferrer";
 

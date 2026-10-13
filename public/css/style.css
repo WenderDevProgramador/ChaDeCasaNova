@@ -88,19 +88,19 @@ ul li {
 ul li a {
     text-decoration: none;
     color: #fff;
-    
+
 }
 
 ul li a:hover {
     font-weight: bold;
-    
+
 }
 
 #divBranco {
     background-color: #fff;
     border-radius: 8px;
     padding-bottom: 2px;
-    
+
 }
 
 #branco {
@@ -110,6 +110,7 @@ ul li a:hover {
 }
 
 #cpf {
+    text-align: center;
     width: 150px;
     font-size: larger;
     padding: 5px;
@@ -117,7 +118,7 @@ ul li a:hover {
 }
 
 #Copia {
-    background-color:#b06032;
+    background-color: #b06032;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -129,12 +130,13 @@ ul li a:hover {
 }
 
 #Copia:hover {
-    background-color:#61351b;
+    background-color: #61351b;
 }
 
 
 
-ul li button, ul li a {
+ul li button,
+ul li a {
     background-color: #8f4e28;
     color: white;
     border: none;
@@ -145,7 +147,8 @@ ul li button, ul li a {
     margin: 7px;
 }
 
-ul li button:hover, ul li a:hover {
+ul li button:hover,
+ul li a:hover {
     background-color: #40140A;
     font-weight: bolder;
 }
@@ -155,10 +158,13 @@ ul li button:hover, ul li a:hover {
 ul li span {
     margin-right: 10px;
     text-align: right;
-    flex-grow: 1; /* Faz o span ocupar o espaço disponível */
+    flex-grow: 1;
+    /* Faz o span ocupar o espaço disponível */
     display: flex;
-    justify-content: flex-end; /* Alinha o texto à direita dentro do span */
-    flex-wrap: wrap; /* Permite que os elementos dentro do span se movam para a linha seguinte */
+    justify-content: flex-end;
+    /* Alinha o texto à direita dentro do span */
+    flex-wrap: wrap;
+    /* Permite que os elementos dentro do span se movam para a linha seguinte */
 }
 
 .Mercado {
@@ -170,7 +176,7 @@ ul li span {
 #mercado {
     width: 160px;
     text-align: center;
-    
+
 }
 
 /* Rodapé */
@@ -197,27 +203,56 @@ footer a:hover {
 }
 
 /* Responsividade */
+
 @media (max-width: 600px) {
+    body {
+        padding: 12px 8px;
+    }
+
     main {
-        padding: 1rem;
+        width: 100%;
+        padding: 16px 12px;
+    }
+
+    .titulo {
+        font-size: 1.8em;
     }
 
     ul li {
+        display: flex;
         flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
         text-align: center;
     }
 
-    ul li a {
-        margin-bottom: 0.5rem;
-    }
-
     ul li span {
-        flex-grow: 0; /* Desativa o crescimento do span */
-        width: 100%; /* O span ocupará 100% da largura do pai */
-        justify-content: center; /* Alinha o texto ao centro dentro do span */
+        width: 100%;
+        margin-right: 0;
+        justify-content: center;
+        text-align: center;
     }
 
-    ul li button {
-        margin-top: 0.5rem;
+    ul li button,
+    ul li a {
+        display: block;
+        width: 100%;
+        margin: 4px 0;
+        text-align: center;
+    }
+
+    #branco {
+        padding: 8px;
+    }
+
+    #cpf {
+        width: 100%;
+        max-width: 240px;
+        font-size: 1rem;
+    }
+
+    #Copia {
+        max-width: 100%;
+        padding: 10px 14px;
     }
 }

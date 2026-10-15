@@ -336,6 +336,8 @@ async function carregarPresentes() {
 }
 
 
+
+
 // ========================================
 // 6. ATUALIZAR OS FILTROS AUTOMATICAMENTE
 // ========================================
@@ -350,3 +352,22 @@ filtroSituacao.addEventListener("change", carregarPresentes);
 // ========================================
 
 carregarPresentes();
+
+const btnSair = document.querySelector("#btnSair");
+
+btnSair.addEventListener("click", async function () {
+    try {
+        const resposta = await fetch("/api/logout", {
+            method: "POST"
+        });
+
+        if (!resposta.ok) {
+            throw new Error("Não foi possível sair.");
+        }
+
+        window.location.href = "/login.html";
+
+    } catch (erro) {
+        alert(erro.message);
+    }
+});

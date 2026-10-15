@@ -1,0 +1,40 @@
+#formLogin {
+    display: grid;
+    gap: 16px;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 20px;
+
+    background-color: #fffaf6;
+    border-radius: 10px;
+}
+
+#formLogin label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#formLogin input {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+
+    font: inherit;
+    border: 1px solid #b9a195;
+    border-radius: 6px;
+}
+
+#formLogin button {
+    width: 100%;
+}
+
+#mensagemErro {
+    color: #9b1c1c;
+    font-weight: bold;
+    margin: 0;
+}
+
+#mensagemErro:empty {
+    display: none;
+}
